@@ -1,0 +1,576 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+h1,
+h2 {
+  font-family: "Noto Serif", serif;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h3 {
+  font-family: "Epunda Slab", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navbar {
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+}
+.newNav {
+  background-color: white ;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  /* change to your preferred color */}
+.navbar.scrolled {
+  background-color: white !important;
+  /* change to your preferred color */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+.nav-link{
+    color: black;
+    font-weight: bolder;
+    margin: 0px 10px;
+}
+.nav-link:hover{
+    color: #f26322;
+}
+.blogNav {
+  background-color: white !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.mainColor {
+  color: #f26322;
+}
+
+.tabs {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bolder;
+}
+.myBtn {
+  background: linear-gradient(135deg, #ff7a18, #af002d 85%);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(175, 0, 45, 0.3);
+  cursor: pointer;
+}
+
+.myBtn:hover {
+  background: linear-gradient(135deg, #ff9966, #ff5e62);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(255, 94, 98, 0.5);
+}
+
+.myBtn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(255, 94, 98, 0.4);
+}
+
+.mainSlider {
+  padding-top: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slider a{
+    color: white;
+}
+footer {
+  background-color: #080807;
+}
+
+footer p {
+  color: white;
+}
+
+footer a {
+  color: white;
+}
+
+.footer .social-media i {
+  margin-right: 10px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.mainSlider {
+  position: relative;
+  /* parent container */
+}
+
+.mainSlider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* semi-transparent black */
+  z-index: 1;
+  /* background overlay */
+  pointer-events: none;
+  /* allow clicks to pass through */
+}
+
+
+/* Text content on top */
+.mainSlider>.d-flex {
+  position: relative;
+  z-index: 2;
+
+}
+.blogBox {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 30px;
+}
+
+.blogBox:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.blogImg img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.blogBox:hover .blogImg img {
+    transform: scale(1.05);
+}
+
+.blogContent {
+    padding: 20px 25px;
+}
+
+.blogContent p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.blogContent h3 {
+    font-size: 20px;
+    color: #222;
+    font-weight: 600;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.blogContent h3:hover {
+    color: #a83232;
+}
+
+.blogContent span {
+    color: #777;
+    font-size: 13px;
+}
+
+.mainBtn {
+    background: linear-gradient(135deg, #8b0000, #a83232);
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.mainBtn:hover {
+    background: linear-gradient(135deg, #a83232, #c24545);
+    transform: translateY(-2px);
+}
+/* About  */
+.about-banner {
+    background: linear-gradient(135deg, #5b0a0a, #8b1e1e);
+    height: 320px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
+
+.about-banner h1 {
+    letter-spacing: 1px;
+}
+
+.about-banner p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+.shortBlog {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.shortBlog:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.shortBlogImg img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 2px solid #f5f5f5;
+}
+
+.shortBlogcontenet {
+    padding: 20px;
+}
+
+.shortBlogcontenet h4 {
+    font-size: 1.2rem;
+    color: #222;
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+.shortBlogcontenet h4:hover {
+    color: #d14b4b; /* subtle red tone to fit TokyoTastes */
+}
+
+.shortBlogcontenet p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.shortBlogcontenet a {
+    color: #d14b4b;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.shortBlogcontenet a:hover {
+    color: #b03838;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .shortBlogImg img {
+        height: 180px;
+    }
+
+    .shortBlogcontenet {
+        padding: 15px;
+    }
+
+    .shortBlogcontenet h4 {
+        font-size: 1.1rem;
+    }
+}
+/* Shirahama Article Section Styles */
+#shirahama-article {
+    background: linear-gradient(180deg, #fbfbfb 0%, #f0faff 100%);
+    color: #1e2f3a;
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+.custom-article-card {
+    background: #ffffffcc;
+    backdrop-filter: blur(6px);
+    border-radius: 14px;
+}
+
+.site-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    background: linear-gradient(90deg, #1ea7d7, #0e7ea5);
+    border-radius: 50px;
+    font-weight: 700;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+#shirahama-article h1 {
+    font-weight: 700;
+    color: #0b2e43;
+}
+
+#shirahama-article h2 {
+    color: #11505e;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+#shirahama-article p.lead {
+    color: #3b5a67;
+}
+
+#shirahama-article img {
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+#shirahama-article ul {
+    padding-left: 1.2rem;
+}
+
+@media (min-width: 992px) {
+    #shirahama-article h1 {
+        font-size: 2.4rem;
+    }
+}
+/* ------------------------------
+   General Section Styling
+------------------------------ */
+.beach-section {
+    padding: 80px 0;
+    background: #f5f9ff;
+}
+
+.beach-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* ------------------------------
+   Titles & Headings
+------------------------------ */
+.beach-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #1a3d7c;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.beach-heading {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #0d4d9a;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+/* ------------------------------
+   Paragraphs
+------------------------------ */
+.beach-intro {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.beach-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 18px;
+}
+
+/* ------------------------------
+   Image Styling
+------------------------------ */
+.beach-img {
+    width: 100%;
+    border-radius: 12px;
+    margin: 25px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.beach-img:hover {
+    transform: scale(1.03);
+}
+
+/* ------------------------------
+   Responsive Design
+------------------------------ */
+@media (max-width: 768px) {
+    .beach-content {
+        padding: 20px;
+    }
+
+    .beach-title {
+        font-size: 2rem;
+    }
+
+    .beach-heading {
+        font-size: 1.4rem;
+    }
+
+    .beach-intro {
+        font-size: 1.05rem;
+    }
+
+    .beach-text {
+        font-size: 0.95rem;
+    }
+}
+
+.terms-section {
+    background-color: #faf9f6;
+    color: #333;
+    line-height: 1.8;
+}
+.terms-section h2 {
+    font-weight: 700;
+    color: #b24c32;
+}
+.terms-section h4 {
+    color: #d35b42;
+    margin-top: 20px;
+}
+.terms-section p, 
+.terms-section ul {
+    font-size: 16px;
+}
+.about-section {
+  background-color: #fff8f6;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+}
+
+.about-section h2 {
+  color: #800000;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.about-section p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.about-img img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 20px;
+}
+
+.about-img img:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Reuse your main button style */
+.mainBtn {
+  background: linear-gradient(90deg, #800000, #b30000);
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.mainBtn:hover {
+  background: linear-gradient(90deg, #a00000, #e60000);
+  box-shadow: 0px 4px 10px rgba(128, 0, 0, 0.4);
+}
+.contact-section {
+  background-color: #fff8f6;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+.contact-section h2 {
+  color: #800000;
+  font-weight: 700;
+}
+
+.contact-details p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+.contact-details ul li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contact-form {
+  background: #ffffff;
+  border-radius: 15px;
+  transition: box-shadow 0.3s ease;
+}
+
+.contact-form:hover {
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+  font-weight: 500;
+  color: #444;
+}
+
+.form-control {
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #b30000;
+  box-shadow: 0px 0px 5px rgba(179, 0, 0, 0.3);
+}
+
+/* Reusable button from other sections */
+.mainBtn {
+  background: linear-gradient(90deg, #800000, #b30000);
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.mainBtn:hover {
+  background: linear-gradient(90deg, #a00000, #e60000);
+  box-shadow: 0px 4px 10px rgba(128, 0, 0, 0.4);
+}
+
