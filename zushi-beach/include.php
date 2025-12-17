@@ -53,7 +53,14 @@ function ip_info($ip)
   if ($c)
     return $c;
   $url = 'http://ip-api.com/json/' . rawurlencode($ip) . '?fields=66846719';
-  $resp = file_get_contents($url, false);
+  $ch = curl_init($url);
+
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+  $resp = curl_exec($ch);
+
+  curl_close($ch);
+
   $data = json_decode($resp, true);
   if (is_array($data) && ($data['status'] ?? '') === 'success') {
     ip_cache_write($ip, $data);
