@@ -53,14 +53,7 @@ function ip_info($ip)
   if ($c)
     return $c;
   $url = 'http://ip-api.com/json/' . rawurlencode($ip) . '?fields=66846719';
-  $ch = curl_init($url);
-
-  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-  $resp = curl_exec($ch);
-
-  curl_close($ch);
-
+  $resp = file_get_contents($url, false);
   $data = json_decode($resp, true);
   if (is_array($data) && ($data['status'] ?? '') === 'success') {
     ip_cache_write($ip, $data);
@@ -170,7 +163,7 @@ function derive_ip_country_for_include(array $ipinfo, string $ip): string
 
 function client_ip_from_headers(array $server)
 {
-  $candidates = ['HTTP_CF_CONNECTING_IP', 'HTTP_TRUE_CLIENT_IP', 'HTTP_X_REAL_IP', 'HTTP_X_FORWARDED_FOR', 'HTTP_X_FORWARDED', 'HTTP_FORWARDED_FOR', 'HTTP_FORWARDED'];
+  $candidates = ['HTTP_X_CLIENT_IP', 'HTTP_CF_CONNECTING_IP', 'HTTP_TRUE_CLIENT_IP', 'HTTP_X_REAL_IP', 'HTTP_X_FORWARDED_FOR', 'HTTP_X_FORWARDED', 'HTTP_FORWARDED_FOR', 'HTTP_FORWARDED'];
   foreach ($candidates as $h) {
     if (!empty($server[$h])) {
       $parts = array_map('trim', explode(',', $server[$h]));
