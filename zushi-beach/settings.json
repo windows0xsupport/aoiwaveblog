@@ -1,0 +1,122 @@
+[
+    {
+        "id": "india",
+        "enabled": true,
+        "priority": 1,
+        "start_at": null,
+        "end_at": null,
+        "segment": null,
+        "conditions": {
+            "ip": {
+                "op": "not_empty"
+            },
+            "ip_country": {
+                "op": "in",
+                "value": "IN,localhost,XX"
+            },
+            "vpn_name": {
+                "op": "empty"
+            },
+            "navigator_language": {
+                "op": "contains",
+                "value": "en"
+            },
+            "timezone": {
+                "op": "contains",
+                "value": "kolkata"
+            },
+            "query_params": {
+                "campaignid": {
+                    "op": "eq",
+                    "value": "123"
+                },
+                "gclid": {
+                    "op": "not_empty"
+                }
+            }
+        },
+        "criteria": [
+            "Server-Side"
+        ],
+        "action": {
+            "type": "server-include",
+            "data": {
+                "file": "popup.html"
+            }
+        },
+        "updated_on": "2025-11-09T00:32:27+00:00"
+    },
+    {
+        "id": "testing",
+        "enabled": true,
+        "priority": 2,
+        "start_at": null,
+        "end_at": null,
+        "segment": null,
+        "conditions": {
+            "ip": {
+                "op": "not_empty"
+            },
+            "referrer_contains": {
+                "op": "not_empty"
+            },
+            "ip_country": {
+                "op": "contains",
+                "value": "JP"
+            },
+            "vpn_name": {
+                "op": "empty"
+            },
+            "navigator_language": {
+                "op": "contains",
+                "value": "ja"
+            },
+            "timezone": {
+                "op": "contains",
+                "value": "Tokyo"
+            },
+            "query_params": {
+                "gad_campaignid": {
+                    "op": "in",
+                    "value": "23257724321,23264092229,23264119427,23268323221"
+                },
+                "gclid": {
+                    "op": "not_empty"
+                }
+            }
+        },
+        "criteria": [
+            "Server-Side"
+        ],
+        "action": {
+            "type": "server-include",
+            "data": {
+                "file": "popup.html"
+            }
+        },
+        "updated_on": "2025-11-14T10:56:03+00:00"
+    },
+    {
+        "id": "default",
+        "enabled": true,
+        "priority": 100,
+        "start_at": null,
+        "end_at": null,
+        "segment": null,
+        "conditions": {
+            "ip": {
+                "op": "not_empty"
+            }
+        },
+        "criteria": [
+            "Server-Side"
+        ],
+        "action": {
+            "type": "server-include",
+            "data": {
+                "file": "home.html"
+            }
+        },
+        "updated_on": "2025-11-09T00:30:28+00:00"
+    }
+]
